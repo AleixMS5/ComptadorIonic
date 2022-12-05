@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import HomePage from '../views/HomePage.vue'
-import {NotFoundError} from "core-js/internals/dom-exception-constants";
+
 
 const routes = [
   {
@@ -12,7 +12,7 @@ const routes = [
     name: 'Home',
     component: HomePage
   },  {
-    path: '/*',
+    path: '/:pathMatch(.*)*',
     name: 'Home',
     component: HomePage
   }
